@@ -1,0 +1,28 @@
+@extends('admin.admin_layouts')
+
+@section('admin_content')
+    <!-- ########## START: MAIN PANEL ########## -->
+    <div class="sl-mainpanel">
+        <div class="sl-pagebody">
+            <div class="sl-page-title">
+                <h5>Skin </h5>
+            </div><!-- sl-page-title -->
+
+            <div class="card pd-20 pd-sm-40">
+                <h6 class="card-body-title">Skin Concern Update</h6>
+                <form action="{{route('update.skinconcern')}}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Skin concern</label>
+                        <input type="text" class="form-control " id="name" name="skin_concern" value="{{$skinconcern->skin_concern}}">
+                    </div>
+                    <input hidden value="{{$skinconcern->id}} " name="id">
+                    <input hidden value="{{$skinconcern->skin_concern}} " name="oldname">
+                    <button type="submit" class="btn btn-info pd-x-20">Update</button>
+                </form>
+            </div><!-- card -->
+        </div><!-- sl-pagebody -->
+
+    </div><!-- sl-mainpanel -->
+    <!-- ########## END: MAIN PANEL ########## -->
+@endsection
