@@ -6,31 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78f1f0a0-12b6-47dd-8f9e-8252d3c5839b" name="Default Changelist" comment="After post">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/order/quentity.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/60" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/[" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/newsletter/NewsletterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/newsletter/NewsletterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/order/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/order/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendCrontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendCrontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/feedback.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_143204_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_143204_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_164945_create_feedback_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_24_164945_create_feedback_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/lib/bootstrap/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/lib/bootstrap/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/access/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/access/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/access/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/access/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_layouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_layouts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/add-order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/add-order.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/allOrder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/allOrder.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/siteinfo/siteinfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/siteinfo/siteinfo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/newsletter/coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/newsletter/coupon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +307,7 @@
       <workItem from="1607499905778" duration="26554000" />
       <workItem from="1607588458984" duration="20577000" />
       <workItem from="1607723393327" duration="59000" />
-      <workItem from="1607870966140" duration="10737000" />
+      <workItem from="1607870966140" duration="11566000" />
     </task>
     <servers />
   </component>
