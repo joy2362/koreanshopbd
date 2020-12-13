@@ -50,6 +50,7 @@ class OrderController extends Controller
         $order -> amount = $request->amount;
         $order -> delivery_cost = $this->delivery_cost($request->location);
         $order -> status = "1";
+        $order -> user_type = "user";
         $order -> save();
 
         $content=Cart::content();

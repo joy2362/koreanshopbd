@@ -3,7 +3,6 @@
 //frontend
 //home
 Route::get('/', 'FrontendCrontroller@index')->name('index');
-Route::get('/pdf', 'FrontendCrontroller@pdf');
 
 //feedback
 Route::get('contact', 'FrontendCrontroller@contact');
@@ -130,7 +129,7 @@ Route::post('admin/store/coupon', 'Admin\coupon\CouponController@storecoupon')->
 Route::post('admin/update/coupon', 'Admin\coupon\CouponController@updatecoupon')->name('update.coupon');
 
 //newsletter
-Route::get('admin/newsletter', 'Admin\newsletter\NewsletterController@shownewsletter')->name('admin.newsletter');
+Route::get('admin/other/newsletter', 'Admin\newsletter\NewsletterController@shownewsletter')->name('admin.newsletter');
 Route::get('admin/sub/delete/{id}', 'Admin\newsletter\NewsletterController@deletesub');
 
 //products
@@ -182,6 +181,7 @@ Route::get('admin/database/backup', 'Admin\sitedetails\SitedetailsController@Dat
 Route::get('admin/database/backup/now', 'Admin\sitedetails\SitedetailsController@BackupNow')->name('admin.backup.now');
 Route::get('delete/database/{getFilename}', 'Admin\sitedetails\SitedetailsController@DeleteDatabase');
 Route::get('download/database/{getFilename}', 'Admin\sitedetails\SitedetailsController@DownloadDatabase');
+
 //order
 Route::get('admin/order/all', 'Admin\order\OrderController@index')->name('all-order');
 Route::get('admin/order/today', 'Admin\order\OrderController@todayOrder')->name('today-order');
@@ -190,6 +190,9 @@ Route::get('admin/order/return', 'Admin\order\OrderController@return')->name('re
 Route::get('admin/order/cancel', 'Admin\order\OrderController@cancel')->name('cancel-order');
 Route::post('admin/order/status', 'Admin\order\OrderController@multiOperation');
 Route::get('admin/order/view/{id}', 'Admin\order\OrderController@show');
+Route::get('admin/order/add', 'Admin\order\OrderController@add')->name('admin.order.add');
+Route::post('admin/order/store', 'Admin\order\OrderController@orderSrore');
+Route::post('admin/order/add', 'Admin\order\OrderController@storeOrder')->name('store-order');
 
 Route::get('admin/order/progress/{id}', 'Admin\order\OrderController@orderProgress');
 Route::get('admin/order/delivered/{id}', 'Admin\order\OrderController@Delevered');
@@ -199,17 +202,41 @@ Route::get('admin/order/generate/pdf', 'Admin\order\OrderController@generatePdf'
 Route::get('admin/order/return/accept', 'Admin\order\OrderController@returnAccept')->name('accept-return');
 Route::get('admin/order/return/confirm/{id}', 'Admin\order\OrderController@returnConfirm');
 
+//user feedback
+Route::get('admin/other/feedback/all', 'Admin\newsletter\NewsletterController@feedback')->name('user-feedback');
+Route::get('admin/other/feedback/view/{id}', 'Admin\newsletter\NewsletterController@ViewFeedback');
+Route::post('admin/other/feedback/reply', 'Admin\newsletter\NewsletterController@sendFeedback')->name('replyFeedback');
+
+
+//admin access
+Route::get('admin/access/all', 'AdminController@allAdmin')->name('admin-access');
+Route::get('admin/access/add', 'AdminController@newAdmin');
+Route::get('admin/access/delete/{id}', 'AdminController@removeAdmin');
+Route::get('admin/access/edit/{id}', 'AdminController@editAdmin');
+Route::post('admin/access/edit', 'AdminController@updateAdmin')->name('update.admin');
+Route::post('admin/access/add', 'AdminController@storeAdmin')->name('store.admin');
+
 
 // SSLCOMMERZ Start
-Route::get('/example1', 'SslCommerzPaymentController@exampleEasyCheckout');
-Route::get('/example2', 'SslCommerzPaymentController@exampleHostedCheckout');
-
-Route::post('/pay', 'SslCommerzPaymentController@index');
-Route::post('/pay-via-ajax', 'SslCommerzPaymentController@payViaAjax');
-
-Route::post('/success', 'SslCommerzPaymentController@success');
-Route::post('/fail', 'SslCommerzPaymentController@fail');
-Route::post('/cancel', 'SslCommerzPaymentController@cancel');
-
-Route::post('/ipn', 'SslCommerzPaymentController@ipn');
+//Route::get('/example1', 'SslCommerzPaymentController@exampleEasyCheckout');
+//Route::get('/example2', 'SslCommerzPaymentController@exampleHostedCheckout');
+//
+//Route::post('/pay', 'SslCommerzPaymentController@index');
+//Route::post('/pay-via-ajax', 'SslCommerzPaymentController@payViaAjax');
+//
+//Route::post('/success', 'SslCommerzPaymentController@success');
+//Route::post('/fail', 'SslCommerzPaymentController@fail');
+//Route::post('/cancel', 'SslCommerzPaymentController@cancel');
+//
+//Route::post('/ipn', 'SslCommerzPaymentController@ipn');
 //SSLCOMMERZ END
+
+/*
+ * in order table there is 6 type of status
+ * 1 for order place
+ * 2 for order pickup
+ * 3 for oder delivery
+ * 4 for order cancel
+ * 5 for return request
+ * 6 for return accept
+ * */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Meta -->
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="author" content="ThemePixels">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Korean Shop</title>
     <!-- vendor css -->
     <link href="{{ asset('public/backend/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
@@ -37,6 +37,7 @@
                     <span class="menu-item-label">Dashboard</span>
                 </div><!-- menu-item -->
             </a><!-- sl-menu-link -->
+            @if(auth()->user()->access->category == 1)
             <a href="#" class="sl-menu-link {{ ( request()->is('admin/skinconcern*') || request()->is('admin/skintype*')  || request()->is('admin/categor*')  || request()->is('admin/brand*') ) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
@@ -50,12 +51,16 @@
                 <li class="nav-item"><a href="{{route("skinconcern")}}" class="nav-link">Skin Concern</a></li>
                 <li class="nav-item"><a href="{{route("brands")}}" class="nav-link">Brand</a></li>
             </ul>
+            @endif
+            @if(auth()->user()->access->coupon == 1)
             <a href="{{route("coupons")}}" class="sl-menu-link {{ (request()->is('admin/coupon*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-email-outline tx-24"></i>
                     <span class="menu-item-label">Coupon</span>
                 </div><!-- menu-item -->
             </a><!-- sl-menu-link -->
+            @endif
+            @if(auth()->user()->access->product == 1)
             <a href="#" class="sl-menu-link {{ (request()->is('admin/product*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
@@ -67,6 +72,21 @@
                 <li class="nav-item"><a href="{{route('add.product')}}" class="nav-link">Add Product</a></li>
                 <li class="nav-item"><a href="{{route('view.product')}}" class="nav-link">All Product</a></li>
             </ul>
+            @endif
+            @if(auth()->user()->access->access == 1)
+            <a href="#" class="sl-menu-link {{ (request()->is('admin/access*')) ? 'active' : '' }}">
+                <div class="sl-menu-item">
+                    <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
+                    <span class="menu-item-label">Access</span>
+                    <i class="menu-item-arrow fa fa-angle-down"></i>
+                </div><!-- menu-item -->
+            </a><!-- sl-menu-link -->
+            <ul class="sl-menu-sub nav flex-column">
+                <li class="nav-item"><a href="{{url('admin/access/add')}}" class="nav-link">Add New</a></li>
+                <li class="nav-item"><a href="{{route('admin-access')}}" class="nav-link">All Admin</a></li>
+            </ul>
+            @endif
+            @if(auth()->user()->access->order == 1)
             <a href="#" class="sl-menu-link {{ (request()->is('admin/order*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
@@ -74,8 +94,9 @@
                     <i class="menu-item-arrow fa fa-angle-down"></i>
                 </div><!-- menu-item -->
             </a><!-- sl-menu-link -->
+
             <ul class="sl-menu-sub nav flex-column">
-                <li class="nav-item"><a href="{{route('add.product')}}" class="nav-link">Add Order</a></li>
+                <li class="nav-item"><a href="{{url('admin/order/add')}}" class="nav-link">Add Order</a></li>
                 <li class="nav-item"><a href="{{route('today-order')}}" class="nav-link">Today's order</a></li>
                 <li class="nav-item"><a href="{{route('month-order')}}" class="nav-link">This month order</a></li>
                 <li class="nav-item"><a href="{{route('cancel-order')}}" class="nav-link">Canceled order</a></li>
@@ -83,7 +104,8 @@
                 <li class="nav-item"><a href="{{route('accept-return')}}" class="nav-link">Return Order</a></li>
                 <li class="nav-item"><a href="{{url('admin/order/all')}}" class="nav-link">All Order</a></li>
             </ul>
-
+            @endif
+            @if(auth()->user()->access->blog == 1)
             <a href="#" class="sl-menu-link {{ (request()->is('admin/post*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-book-outline tx-24"></i>
@@ -96,10 +118,12 @@
                 <li class="nav-item"><a href="{{route('add.post')}}" class="nav-link">Add Post</a></li>
                 <li class="nav-item"><a href="{{route('view.post')}}" class="nav-link">All Post</a></li>
             </ul>
+            @endif
+            @if(auth()->user()->access->site_setting == 1)
             <a href="#" class="sl-menu-link  {{ (request()->is('admin/siteinfo*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-settings tx-22"></i>
-                    <span class="menu-item-label">Site info</span>
+                    <span class="menu-item-label">Setting</span>
                     <i class="menu-item-arrow fa fa-angle-down"></i>
                 </div><!-- menu-item -->
             </a><!-- sl-menu-link -->
@@ -108,7 +132,9 @@
                 <li class="nav-item"><a href="{{route('mainslider')}}" class="nav-link">Main Slider</a></li>
                 <li class="nav-item"><a href="{{route('database.backup')}}" class="nav-link">Database Backup</a></li>
             </ul>
-            <a href="#" class="sl-menu-link  {{ (request()->is('admin/newsletter*')) ? 'active' : '' }}">
+            @endif
+            @if(auth()->user()->access->other == 1)
+            <a href="#" class="sl-menu-link  {{ (request()->is('admin/other*')) ? 'active' : '' }}">
                 <div class="sl-menu-item">
                     <i class="menu-item-icon icon ion-ios-paper-outline tx-22"></i>
                     <span class="menu-item-label">Others</span>
@@ -117,8 +143,9 @@
             </a><!-- sl-menu-link -->
             <ul class="sl-menu-sub nav flex-column">
                 <li class="nav-item"><a href="{{route("admin.newsletter")}}" class="nav-link">Newsletters</a></li>
+                <li class="nav-item"><a href="{{route("user-feedback")}}" class="nav-link">Feedback</a></li>
             </ul>
-
+            @endif
 
         </div><!-- sl-sideleft-menu -->
         <br>

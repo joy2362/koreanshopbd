@@ -5,7 +5,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78f1f0a0-12b6-47dd-8f9e-8252d3c5839b" name="Default Changelist" comment="After post" />
+    <list default="true" id="78f1f0a0-12b6-47dd-8f9e-8252d3c5839b" name="Default Changelist" comment="After post">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/order/quentity.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/[" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/newsletter/NewsletterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/newsletter/NewsletterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/order/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/order/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontendCrontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontendCrontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/feedback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_143204_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_143204_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_164945_create_feedback_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_24_164945_create_feedback_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdminSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/lib/bootstrap/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/lib/bootstrap/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/access/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/access/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/access/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/access/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_layouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_layouts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/add-order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/add-order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/allOrder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/allOrder.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/siteinfo/siteinfo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/siteinfo/siteinfo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/newsletter/coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/newsletter/coupon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +199,7 @@
       <recent name="C:\xampp\htdocs\multiauth-master\public\frontend" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Newslaters.php">
+  <component name="RunManager" selected="Firefox Remote.runProject">
     <configuration name="runProject" type="FirefoxRemoteDebugType">
       <method v="2" />
     </configuration>
@@ -302,7 +328,9 @@
       <workItem from="1607412872291" duration="23930000" />
       <workItem from="1607443274540" duration="9508000" />
       <workItem from="1607499905778" duration="26554000" />
-      <workItem from="1607588458984" duration="3771000" />
+      <workItem from="1607588458984" duration="20577000" />
+      <workItem from="1607723393327" duration="59000" />
+      <workItem from="1607870966140" duration="10737000" />
     </task>
     <servers />
   </component>
@@ -362,15 +390,16 @@
     </state>
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1607446135494" />
     <state x="137" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1604429714524" />
-    <state x="432" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602960544524">
+    <state x="432" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607593273549">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="432" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1607593273549" />
     <state x="432" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1602960544524" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607548518317">
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607884300993">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1607548518317" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1607113346227" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1607604505587" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1607884300993" />
     <state x="0" y="0" width="1366" height="738" key="SettingsEditor" timestamp="1607112684454">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -387,11 +416,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1603436143898" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607439536472">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1607884542337">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1607439536472" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1607112271810" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1607884542337" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

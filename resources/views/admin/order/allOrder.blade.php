@@ -8,30 +8,30 @@
                 <h5>Order Table</h5>
             </div><!-- sl-page-title -->
 
-            <div class="card pd-20 pd-sm-40">
-                <h6 class="card-body-title">Order List</h6>
-                <div class="mg-b-10" >  <button id="pickup" class="btn btn-sm btn-info">pickup</button>
-                    <button id="delivery" class="btn btn-sm btn-success">Delevered</button></div>
-                <div class="table-wrapper">
-                    <table id="datatable1" class="table display responsive nowrap">
-                        <thead>
-                        <tr>
-                            <th class="wd-15p"><input type="checkbox" name='checkboxMaster' /></th>
-                            <th class="wd-15p">ID</th>
-                            <th class="wd-15p">Name</th>
-                            <th class="wd-15p">Amount</th>
-                            <th class="wd-15p">Date</th>
-                            <th class="wd-20p">Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($orders as $row)
-                            <tr>
-                                <td ><input type="checkbox" id="id_chk1" class="checkRow" value="{{$row->id}}" /></td>
-                                <td>{{$row->order_Id}}</td>
-                                <td>{{$row->name}}</td>
-                                <td>{{$row->amount}}</td>
-                                <td>{{\Carbon\Carbon::parse($row->created_at)->format('d-m-Y')}}</td>
+                  <div class="card pd-20 pd-sm-40">
+                                    <h6 class="card-body-title">Order List</h6>
+                                    <div class="mg-b-10" >  <button id="pickup" class="btn btn-sm btn-info">pickup</button>
+                                        <button id="delivery" class="btn btn-sm btn-success">Delevered</button></div>
+                                    <div class="table-wrapper">
+                                        <table id="datatable1" class="table display responsive nowrap">
+                                            <thead>
+                                            <tr>
+                                                <th class="wd-15p"><input type="checkbox" name='checkboxMaster' /></th>
+                                                <th class="wd-15p">ID</th>
+                                                <th class="wd-15p">Name</th>
+                                                <th class="wd-15p">Amount</th>
+                                                <th class="wd-15p">Date</th>
+                                                <th class="wd-20p">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($orders as $row)
+                                                <tr>
+                                                    <td ><input type="checkbox" id="id_chk1" class="checkRow" value="{{$row->id}}" /></td>
+                                                    <td>{{$row->order_Id}}</td>
+                                                    <td>{{$row->name}}</td>
+                                                    <td>{{$row->amount}}</td>
+                                                    <td>{{\Carbon\Carbon::parse($row->created_at)->format('d-m-Y')}}</td>
 
                                 <td>
                                     @if($row->status == '1')

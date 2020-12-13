@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use  App\Admin;
 use App\SiteDetails;
+use App\AdminAccess;
 
 class AdminSeeder extends Seeder
 {
@@ -13,13 +14,27 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        Admin::create([
-        'name'=>'abdullah zahid',
-        'phone'=>'01780134797',
-        'email'=>'abdullahzahidjoy@gmail.com',
-        'avatar'=>'public\backend\img\joy2362.jpg',
-        'password'=>Hash::make('2362'),
-    ]);
+        $admin = new Admin();
+        $admin->name ='abdullah zahid';
+        $admin->phone ='01780134797';
+        $admin->email ='abdullahzahidjoy@gmail.com';
+        $admin->avatar ='public\backend\img\joy2362.jpg';
+        $admin->password =Hash::make('2362');
+        $admin->save();
+
+        $access = new AdminAccess();
+        $access->user = $admin->id;
+        $access->category = 1;
+        $access->coupon = 1;
+        $access->product = 1;
+        $access->order = 1;
+        $access->blog = 1;
+        $access->site_setting = 1;
+        $access->other = 1;
+        $access->access = 1;
+        $access->save();
+
+
         SiteDetails::create([
             'site_name'=>'KoreanShop',
             'address'=>'ishurdi',

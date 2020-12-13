@@ -24,4 +24,9 @@ class Admin extends Authenticatable
         protected $hidden = [
             'password', 'remember_token',
         ];
+
+    public function access()
+    {
+        return $this->hasOne('App\AdminAccess','id');
+    }
 }

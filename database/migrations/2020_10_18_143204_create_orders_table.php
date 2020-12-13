@@ -24,6 +24,7 @@ class CreateOrdersTable extends Migration
             $table->float('amount');
             $table->float('delivery_cost');
             $table->date('delivery_date')->nullable();
+            $table->string('user_type');
             $table->string('status');
             $table->timestamps();
         });
