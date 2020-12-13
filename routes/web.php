@@ -41,15 +41,16 @@ Route::get('remove/wishlist/{id}', 'FrontendCrontroller@removewishlist');
 Route::get('wishlist', 'FrontendCrontroller@showWishlist');
 Route::get('shipingcost/{value}', 'CartController@changeshipingcost');
 
+// tracking
+Route::post('order/tracking', 'FrontendCrontroller@OrderTracking')->name('order.tracking');
+Route::get('order/tracking', 'FrontendCrontroller@OrderTrack');
+
 //order
 Route::post('new/order', 'OrderController@add')->name('order.add');
 Route::get('cancel/order/{id}', 'OrderController@cancel')->name('order.cancel');
 Route::get('return/order/{id}', 'OrderController@return')->name('order.cancel');
 Route::get('order/{id}', 'OrderController@singleOrder');
 
-// tracking
-Route::post('order/tracking', 'FrontendCrontroller@OrderTracking')->name('order.tracking');
-Route::get('order/tracking', 'FrontendCrontroller@OrderTrack');
 
 //compare
 Route::get('add/compare/{id}', 'compareController@store');
